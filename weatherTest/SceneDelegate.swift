@@ -22,13 +22,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //Show weather list view after launching
         let vc = WeatherListVC()
         let navVC = UINavigationController(rootViewController: vc)
+        navigationBarConfig(navVC)
+        vc.title = "Weather"
+        
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.rootViewController = navVC
-        navVC.view.backgroundColor = .primary
         window?.makeKeyAndVisible()
     }
-
+    
+    private func navigationBarConfig (_ controller: UINavigationController) {
+        controller.navigationBar.prefersLargeTitles = true
+        controller.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.accent]
+        controller.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.accent]
+    }
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

@@ -9,7 +9,7 @@ import UIKit
 
 extension UIColor {
     static var primary: UIColor {
-        return UIColor(red: 0.059, green: 0.059, blue: 0.059, alpha: 1)
+        return UIColor(red: 0, green: 0, blue: 0, alpha: 1)
     }
     static var secondary: UIColor {
         return UIColor(red: 0.157, green: 0.157, blue: 0.165, alpha: 1)
