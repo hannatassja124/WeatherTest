@@ -100,7 +100,7 @@ class WeatherListTableViewCell: UITableViewCell {
         self.contentView.addSubview(weatherIcon)
         self.stackView.addSubview(locationLabel)
         self.stackView.addSubview(descWeatherLabel)
-        self.stackView.addArrangedSubview(pressureLabel)
+        self.stackView.addSubview(pressureLabel)
 
         self.contentView.addSubview(temperatureLabel)
     }

@@ -34,6 +34,9 @@ class WeatherListVC: UIViewController {
         weatherTableView.register(WeatherListTableViewCell.self, forCellReuseIdentifier: "cell")
         
         weatherTableView.separatorStyle = .none
+        
+        self.view.backgroundColor = .primary
+        weatherTableView.backgroundColor = .primary
     }
     
     private func createSubview(){
@@ -63,6 +66,7 @@ extension WeatherListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WeatherListTableViewCell
         cell.info = animal[indexPath.row]
+        cell.backgroundColor = .primary
         return cell
     }
     
