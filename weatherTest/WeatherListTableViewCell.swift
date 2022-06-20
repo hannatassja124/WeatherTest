@@ -9,9 +9,11 @@ import UIKit
 
 class WeatherListTableViewCell: UITableViewCell {
     
-    var info: String? {
+    var info: Weather? {
         didSet {
-            locationLabel.text = info
+            guard let test = info else {return}
+            locationLabel.text = "\(test.lat)"
+            weatherIcon.load(url: "http://openweathermap.org/img/wn/\(test.current.weather.icon)@1x.png")
         }
     }
     
@@ -25,7 +27,7 @@ class WeatherListTableViewCell: UITableViewCell {
     }()
     
     private let weatherIcon: UIImageView = {
-        let img = UIImageView(image: UIImage(systemName: "sun.haze"))
+        let img = UIImageView()
         img.contentMode = .scaleAspectFit
         img.translatesAutoresizingMaskIntoConstraints = false
         return img

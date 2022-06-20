@@ -23,7 +23,7 @@ class WeatherListVC: UIViewController, CLLocationManagerDelegate {
     
     var weatherList = [Weather]()
     
-    var animal = ["animal", "test"]
+    //var animal = ["animal", "test"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +88,6 @@ class WeatherListVC: UIViewController, CLLocationManagerDelegate {
                     let res = try JSONDecoder().decode(Weather.self, from: data)
                     DispatchQueue.main.async{
                         self.weatherList.append(res)
-            
                         self.weatherTableView.reloadData()
                     }
                     print("res", res.lat)
@@ -158,12 +157,6 @@ class WeatherListVC: UIViewController, CLLocationManagerDelegate {
 
 extension WeatherListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if weatherList.count == 0 {
-            
-        } else {
-            self.weatherTableView.reloadData()
-        }
-        
         return weatherList.count
     }
     
