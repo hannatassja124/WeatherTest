@@ -23,7 +23,7 @@ class WeatherListVC: UIViewController, CLLocationManagerDelegate {
     
     var weatherList = [Weather]()
     
-    //var animal = ["animal", "test"]
+    var animal = ["Your Location", "test"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -20,7 +20,7 @@ class WeatherDailyView: UIView {
     }()
     
     private let weatherIcon: UIImageView = {
-        let img = UIImageView(image: UIImage(systemName: "humidity"))
+        let img = UIImageView(image: UIImage(systemName: "sun.haze"))
         img.sizeToFit()
         img.contentMode = .scaleAspectFit
         img.tintColor = .accent

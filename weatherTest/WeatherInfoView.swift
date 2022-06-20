@@ -45,7 +45,7 @@ class WeatherInfoView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        attributeNumber.text = "dajdla"
+        attributeNumber.text = "7 mph"
         attributeText.text = "Wind"
         
         self.backgroundColor = .secondary
